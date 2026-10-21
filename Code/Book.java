@@ -1,7 +1,11 @@
+import java.util.ArrayList;
+
 public class Book {
     private final String ISBN, title, author;
     private String description;
     private double price;
+    private int stock;
+    private ArrayList <Review> listOfReviews = new ArrayList<>();
 
     public Book(String ISBN, String title, String author)
     {
@@ -10,6 +14,7 @@ public class Book {
         this.author = author;
         this.price = 0.0;
         this.description = "";
+        this.stock = 1;
     }
 
     public Book(String ISBN, String title, String author,double price)
@@ -19,6 +24,7 @@ public class Book {
         this.author = author;
         this.price = price;
         this.description = "";
+        this.stock = 1;
     }
     
     public Book(String ISBN, String title, String author, double price, String description)
@@ -28,7 +34,38 @@ public class Book {
         this.author = author;
         this.price = price;
         this.description = description;
-    }    
+        this.stock = 1;
+    }
+    
+    public Book(String ISBN, String title, String author, int stock)
+    {
+        this.ISBN = ISBN;
+        this.title = title;
+        this.author = author;
+        this.price = 0.0;
+        this.description = "";
+        this.stock = stock;
+    }
+
+    public Book(String ISBN, String title, String author,double price, int stock)
+    {
+        this.ISBN = ISBN;
+        this.title = title;
+        this.author = author;
+        this.price = price;
+        this.description = "";
+        this.stock = stock;
+    }
+
+    public Book(String ISBN, String title, String author, double price, String description, int stock)
+    {
+        this.ISBN = ISBN;
+        this.title = title;
+        this.author = author;
+        this.price = price;
+        this.description = description;
+        this.stock = stock;
+    }
     // Getters
     public String getISBN()
     {
@@ -50,6 +87,11 @@ public class Book {
     {
         return this.description;
     }
+    public int getStock()
+    {
+        return this.stock;
+    }
+
     // Setters
     public void setPrice(double price)
     {
@@ -58,5 +100,24 @@ public class Book {
     public void setDescription(String description)
     {
        this.description = description;
+    }
+
+    // Methods
+    public void addBookToStock()
+    {
+        this.stock++;
+    }
+
+    public void removeBookFromStock()
+    {
+        if (this.stock > 0)
+        {
+            this.stock--;
+        }
+    }
+
+    public void addReview(Review review)
+    {
+        this.listOfReviews.add(review);
     }
 }

@@ -1,12 +1,11 @@
 import java.util.ArrayList;
-import java.util.HashMap;
 
 public class User {
     private String username;
     private String password;
     private boolean isLoggedIn = false;
     private ArrayList<Book> listOfBooks = new ArrayList<>();
-    private HashMap<Book, Review> listOfReviews = new HashMap<>();
+    private ArrayList<Review> listOfReviews = new ArrayList<>();
     
     public User(String username, String password)
     {
@@ -47,20 +46,30 @@ public class User {
         }
     }
 
+    public void logOut()
+    {
+        this.isLoggedIn = false;
+    }
+
     public void orderBook(Book book)
     {
         if (this.isLoggedIn & Catalogue.isInCatalogue(book))
         {
-            listOfBooks.add(book);
+            Order order = new Order();
+            this.listOfBooks.add(book);
         }
     }
 
 
         public void writeReview(Book book, Review review)
     {
-        if (this.isLoggedIn & listOfBooks.contains(book))
+        if (this.isLoggedIn && listOfBooks.contains(book) && review.getUser() == this)
         {
-            listOfReviews.put(book, review);
+            this.listOfReviews.add(review);
+            if (review.getBook() == book)
+            {
+              book.addReview(review);
+            }
         }
     }
 

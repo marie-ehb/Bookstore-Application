@@ -1,8 +1,7 @@
-import java.util.ArrayList;
-import java.util.Collections;
+import java.util.HashSet;
 
 public class Catalogue {
-    private static ArrayList <Book> catalogue = new ArrayList<>();
+    private static HashSet <Book> catalogue = new HashSet<>();
 
     public static void addBook(Book book)
     {
@@ -33,14 +32,18 @@ public class Catalogue {
         }
     }
 
-    public static int howManyInStock(Book book)
-    {
-        return Collections.frequency(catalogue, book);
-    }
-
     public static int sizeOfCatalogue()
     {
         return catalogue.size();
+    }
+
+    public static int howManyInStock()
+    {   int stock = 0;
+        for (Book book : catalogue)
+        {
+            stock += book.getStock();
+        }
+        return stock;
     }
 
     public static String showCatalogue()
