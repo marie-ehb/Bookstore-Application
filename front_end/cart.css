@@ -1,0 +1,108 @@
+/* Cart page – builds on style.css (header, footer, .cover) */
+
+main.cart {
+  max-width: 62rem;
+  padding-top: 3rem;
+}
+
+.table-wrap { overflow-x: auto; }
+
+.cart-table {
+  width: 100%;
+  min-width: 42rem;
+  max-width: 50rem;
+  margin: 0 auto;
+  border-collapse: collapse;
+  color: var(--ink);
+}
+
+.cart-table th,
+.cart-table td {
+  padding: 0;
+  text-align: left;
+  vertical-align: top;
+}
+
+/* column widths */
+.cart-table thead th:first-child,
+.cart-table tbody td:first-child { width: 15rem; }
+.col-price    { width: 8rem; }
+.col-amount   { width: 8rem; text-align: center !important; }
+.col-subtotal { width: 8rem; text-align: center !important; }
+.col-remove   { width: 4rem; text-align: right !important; vertical-align: bottom !important; }
+
+/* header row */
+.cart-table thead th {
+  padding-bottom: 1.4rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+/* body rows */
+.cart-table tbody td { padding-bottom: 2.6rem; }
+
+.book { display: flex; gap: .9rem; }
+.book .cover {
+  width: 4.7rem;
+  flex: none;
+  aspect-ratio: 2 / 3;
+  padding: .2rem;
+  font-size: .6rem;
+}
+.book p { margin: 0; }
+.title  { font-size: 1rem; margin-top: .1rem !important; }
+.author { font-size: .85rem; margin-top: .5rem !important; }
+
+.big { font-size: 1.35rem; }
+
+.qty {
+  width: 2.8rem;
+  height: 2.2rem;
+  border: 1px solid #555;
+  border-radius: 0;
+  background: #fff;
+  font: inherit;
+  font-size: 1.2rem;
+  text-align: center;
+  color: var(--ink);
+  -moz-appearance: textfield;
+}
+.qty::-webkit-outer-spin-button,
+.qty::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+
+.trash {
+  width: 2.2rem;
+  height: 2.2rem;
+  display: inline-grid;
+  place-items: center;
+  border: 0;
+  cursor: pointer;
+  background: #fff;
+}
+.trash svg { width: 1.4rem; height: 1.4rem; fill: var(--ink); }
+.trash:hover { background: #f0f0f0; }
+
+/* footer row of the table */
+.cart-table tfoot td,
+.cart-table tfoot th { vertical-align: middle; }
+
+.go-back { font-size: .95rem; color: var(--ink); margin-left: .5rem; }
+
+.total-label { font-size: 1.3rem; font-weight: 700; white-space: nowrap; }
+.total-value { font-size: 1.3rem; }
+
+.pay {
+  padding: .6rem 1.1rem;
+  border: 0;
+  border-radius: .35rem;
+  background: #5a9a4f;
+  color: #fff;
+  font: inherit;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+.pay:hover { background: #4b8441; }
+
+@media (max-width: 720px) {
+  main.cart { padding-top: 2rem; }
+}

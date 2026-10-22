@@ -1,0 +1,118 @@
+/* Account page – builds on style.css (header, footer, .cover, .more) */
+
+main.account {
+  max-width: 62rem;
+  padding-top: 2.5rem;
+  background-color: #eef3e2;
+}
+
+/* ---------- Profile ---------- */
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  margin-bottom: 3rem;
+  width: 100%;
+  height: 200px;
+}
+
+.avatar {
+  width: 10rem;
+  height: 10rem;
+  fill: var(--ink);
+  flex: none;
+}
+
+.profile h1 {
+  margin: 0;
+  font-size: 2.6rem;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--ink);
+}
+
+/* ---------- Orders ---------- */
+.orders {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem 3rem;
+  max-width: 50rem;
+  margin-inline: auto;
+  height: 50%;
+}
+
+.order {
+  display: flex;
+  gap: .6rem;
+}
+
+.order .cover {
+  width: 9rem;
+  flex: none;
+  aspect-ratio: 2 / 3;
+  padding: .3rem;
+  font-size: .65rem;
+}
+
+.order > a { display: block; flex: none; }
+
+.order-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 0;
+  color: var(--ink);
+}
+
+.order-info h2 {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 400;
+}
+
+.order-info p { margin: 0; }
+
+.author {
+  font-size: .8rem;
+  margin-top: .15rem !important;
+}
+
+.label {
+  font-size: .8rem;
+  margin-top: .6rem !important;
+}
+
+.stars {
+  font-size: 1.05rem;
+  line-height: 1.2;
+  letter-spacing: .03em;
+}
+
+.text-link {
+  display: inline-block;
+  font-size: .8rem;
+  color: var(--ink);
+}
+
+.add-review { margin-top: .6rem; }
+
+.delivery { font-size: .8rem; }
+
+.more-wrap {
+  max-width: 50rem;
+  margin: 1.5rem auto 0;
+  text-align: right;
+}
+.more-wrap .more { margin-top: 0; font-size: .9rem; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 720px) {
+  .profile { gap: 1.2rem; }
+  .avatar { width: 5.5rem; height: 5.5rem; }
+  .profile h1 { font-size: 1.8rem; }
+  .orders { grid-template-columns: 1fr; }
+}

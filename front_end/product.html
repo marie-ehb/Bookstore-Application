@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Middlemarch – Java Books</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="product.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a class="logo" href="index.html" aria-label="Java Books home">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5.5C10 4 7 3.5 2 3.5v15c5 0 8 .5 10 2 2-1.5 5-2 10-2v-15c-5 0-8 .5-10 2zM4 5.6c3.6.2 5.8.8 7 1.8v10.5c-1.4-.8-3.4-1.3-7-1.6zm16 0v10.7c-3.6.3-5.6.8-7 1.6V7.4c1.2-1 3.4-1.6 7-1.8z"/></svg>
+    <span>JAVA BOOKS</span>
+  </a>
+
+  <form class="search" role="search" action="#">
+    <label class="visually-hidden" for="q">Search books</label>
+    <input id="q" type="search" name="q">
+    <button type="submit" aria-label="Search">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="10" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15 15l6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+  </form>
+
+  <a class="icon-link" href="account.html" aria-label="Account">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7" r="5"/><path d="M1.5 23c0-6 4.5-9 10.5-9s10.5 3 10.5 9z"/></svg>
+  </a>
+  <a class="icon-link" href="cart.html" aria-label="Cart">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M1 2h4l3 14h12l2.5-10H6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="10" cy="21" r="1.8"/><circle cx="18" cy="21" r="1.8"/></svg>
+  </a>
+</header>
+
+<main class="product">
+  <div class="product-layout">
+    <img class="cover middlemarch" src="assets/middlemarch.png" alt="Middlemarch by George Eliot, Oxford World's Classics cover">
+
+    <section class="details">
+      <h1>MIDDLEMARCH</h1>
+      <p class="author">George Eliot</p>
+      <p class="description">
+        Following the lives and loves of the inhabitants of a provincial English town in the middle of the 19th century, Eliot’s sixth novel is widely recognised as her masterpiece. Though she originally planned to write two separate books, Eliot merged them to create an intricately patterned epic that explores work and marriage, ambition and creativity, selfishness and community spirit against a background of political, social and technological change. An immediate bestseller, it has shaped literature in English ever since; few will be surprised to see it at the top of our list. As Emily Dickinson wrote: “What do I think of Middlemarch? What do I think of glory?”
+      </p>
+      <div class="buy">
+        <button type="button" class="add-to-cart">ADD TO CART</button>
+        <p class="price">€ 10</p>
+      </div>
+    </section>
+
+    <aside class="reviews" aria-label="Reviews">
+      <div class="reviewer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7" r="5"/><path d="M1.5 23c0-6 4.5-9 10.5-9s10.5 3 10.5 9z"/></svg>
+        <span>Mark Andre</span>
+      </div>
+      <p class="stars" role="img" aria-label="5 out of 5 stars">★★★★★</p>
+      <p class="review-text">Good book. Very well written. Recommended for all audiences. Fun to read.</p>
+      <a class="more" href="#">MORE REVIEWS</a>
+    </aside>
+  </div>
+
+  <a class="more" href="index.html">MORE BOOKS</a>
+</main>
+
+<footer class="site-footer">
+  <nav aria-label="Footer">
+    <a href="#">STORES</a>
+    <a href="#">CUSTOMER SERVICE</a>
+    <a href="#">ABOUT</a>
+  </nav>
+  <div class="social">
+    <a href="https://www.facebook.com" aria-label="Facebook">
+      <svg viewBox="0 0 24 24"><path d="M14 8V6c0-1 .3-1.5 1.7-1.5H18V1h-3.2C11.200 1 9.500 3 9.500 5.800V8H7v3.500h2.500V23H14V11.500h3.600L18 8z"/></svg>
+    </a>
+    <a href="https://www.instagram.com" aria-label="Instagram">
+      <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5.500" fill="none" stroke="currentColor" stroke-width="2.200"/><circle cx="12" cy="12" r="4.500" fill="none" stroke="currentColor" stroke-width="2.200"/><circle cx="17.800" cy="6.200" r="1.300"/></svg>
+    </a>
+    <a href="https://www.youtube.com" aria-label="YouTube">
+      <svg viewBox="0 0 24 24"><path d="M23 7.200c-.3-1.100-1-1.800-2.100-2C19 4.700 12 4.700 12 4.700s-7 0-8.900.5c-1.100.3-1.800 1-2.100 2C.5 9.100.5 12 .5 12s0 2.900.5 4.800c.3 1.100 1 1.800 2.100 2 1.900.5 8.900.5 8.900.5s7 0 8.900-.5c1.100-.3 1.800-1 2.100-2 .5-1.900.5-4.800.5-4.800s0-2.900-.5-4.800zM9.700 15.200V8.800l5.800 3.200z"/></svg>
+    </a>
+  </div>
+</footer>
+
+</body>
+</html>
