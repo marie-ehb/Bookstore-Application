@@ -9,7 +9,7 @@ public class Review {
         this.score = score;
     }
 
-    public void setText()
+    public void setText(String text)
     {
         this.text = text;
     }

@@ -56,6 +56,7 @@ public class User {
         if (this.isLoggedIn & Catalogue.isInCatalogue(book))
         {
             Order order = new Order();
+            order.orderBook(book);
             this.listOfBooks.add(book);
         }
     }
