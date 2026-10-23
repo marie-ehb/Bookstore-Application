@@ -93,7 +93,7 @@ main.product {
   color: var(--ink);
 }
 
-.reviews .more { margin-top: 0; }
+.reviews .home { margin-top: 0; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 1000px) {
