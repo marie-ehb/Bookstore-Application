@@ -1,8 +1,8 @@
 :root {
   --ink: #000;
   --text: #333;
-  --mint: #ccf2c3;
-  --page: #fff;
+  --mint: #c9eaae;
+  --page: #f3ede6;
 }
 
 * { box-sizing: border-box; }
@@ -31,9 +31,10 @@ a { color: inherit; }
 /* ---------- Header ---------- */
 .site-header {
   display: flex;
-  align-items: center;
-  gap: 3rem;
+  align-items: space-between;
+  gap: 33rem;
   padding: 1.5rem 1.5rem 0 1.5rem;
+  width: 100vw;
 }
 
 .logo {
@@ -48,7 +49,7 @@ a { color: inherit; }
 }
 .logo svg { width: 4.4rem; height: 3.4rem; fill: var(--ink); }
 
-.search {
+/* .search {
   flex: 1;
   display: flex;
   max-width: 75%;
@@ -78,7 +79,7 @@ a { color: inherit; }
   display: grid;
   place-items: center;
 }
-.search button svg { width: 2rem; height: 2rem; }
+.search button svg { width: 2rem; height: 2rem; } */
 
 .icon-link { color: var(--ink); align-self: flex-start; }
 .icon-link svg { width: 4.4rem; height: 4.4rem; fill: currentColor; display: block; }
@@ -108,15 +109,15 @@ main {
   aspect-ratio: 238 / 362;
   object-fit: cover;
   /* Fallback colours + alt text show if an image file is missing */
-  background: #888;
+  background: var(--text);
   color: #fff;
   font-size: 1.2rem;
   text-align: center;
   padding: 1rem;
 }
-.cover.middlemarch { background: #5a4a35; }
+/* .cover.middlemarch { background: #5a4a35; }
 .cover.beloved     { background: #8a3f5c; }
-.cover.ulysses     { background: #3f8587; }
+.cover.ulysses     { background: #3f8587; } */
 
 .books a { display: block; transition: transform .15s ease; }
 .books a:hover { transform: translateY(-4px); }

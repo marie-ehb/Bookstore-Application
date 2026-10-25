@@ -34,13 +34,16 @@ main.account {
 
 /* ---------- Orders ---------- */
 .orders {
+  width: 80%;
   list-style: none;
   margin: 0;
   padding: 0;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* grid-template-columns: repeat(2, minmax(0, 1fr)); */
   gap: 2rem 3rem;
-  max-width: 50rem;
+  /* max-width: 50rem; */
   margin-inline: auto;
   height: 50%;
 }
