@@ -126,3 +126,19 @@ cartTableBody.addEventListener('input', (e) =>
 
     updateTotal();
 });
+
+fetch('/process', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+        body: JSON.stringify({ name: 'name', email: 'email' })
+    })
+.then(response => response.json())
+.then(data => {
+    // Handle the response from the backend
+    console.log(data);
+})
+.catch(error => {
+    console.error('Error:', error);
+});
